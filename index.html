@@ -693,137 +693,6 @@
     font-family: monospace;
   }
 
-  /* ============ ACCOUNT SECTION (순수 CSS 중앙 정렬) ============ */
-  .account-wrap {
-    position: relative;
-    width: 100%;
-    background-color: #fffefc;
-  }
-
-  .canvas {
-    position: relative;
-    width: 100%;
-  }
-
-  .canvas-bg {
-    display: none;
-  }
-
-  .stack {
-    position: relative;
-    padding: 30px 20px 60px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    max-width: 337px;
-  }
-
-  .account-text-block {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  .envelope-title {
-    font-family: 'GyeonggiBatang', serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: #9ec2d5;
-    letter-spacing: 0.02em;
-    margin-bottom: 10px;
-  }
-  .envelope-message {
-    font-family: 'GyeonggiBatang', serif;
-    font-size: 12.5px;
-    line-height: 1.7;
-    color: #6f6a60;
-  }
-
-  .accordion {
-    width: 100%;
-    background: #fffefc;
-    border-radius: 26px;
-    box-shadow: 0 4px 14px rgba(120, 110, 90, 0.14);
-    overflow: hidden;
-    transition: border-radius 0.35s ease;
-  }
-  .accordion.is-open { border-radius: 20px; }
-
-  .accordion-header {
-    width: 100%;
-    height: 44px;
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 14px;
-    color: #4a4640;
-    letter-spacing: 0.02em;
-  }
-  .accordion-header:focus-visible { outline: 2px solid #9fb8ad; outline-offset: -4px; }
-
-  .chevron { width: 12px; height: 12px; flex-shrink: 0; transition: transform 0.35s ease; }
-  .chevron path { fill: none; stroke: #8a8378; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-  .accordion.is-open .chevron { transform: rotate(180deg); }
-
-  .accordion-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s ease; }
-  .accordion.is-open .accordion-panel { grid-template-rows: 1fr; }
-  .accordion-panel-inner { min-height: 0; overflow: hidden; }
-
-  .account-list { padding: 2px 20px 18px; }
-
-  .account-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 4px;
-    border-top: 1px solid #ece7de;
-  }
-  .account-row:first-child { border-top: none; }
-
-  .account-info { display: flex; flex-direction: column; gap: 3px; font-size: 13px; color: #57524a; line-height: 1.5; }
-  .account-info .who { font-size: 13px; color: #a39c8f; }
-  .account-info .num { font-size: 13px; color: #4a4640; }
-  .account-info .bank-name { font-size: 13px; color: #4a4640; }
-
-  .copy-btn {
-    flex-shrink: 0;
-    padding: 6px 12px;
-    font-family: inherit;
-    font-size: 12px;
-    color: #6f6a60;
-    background: #f4f1ea;
-    border: 1px solid #e4dfd3;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
-    white-space: nowrap;
-  }
-  .copy-btn:hover { background: #ebe6da; }
-  .copy-btn.copied { background: #9fb8ad; border-color: #9fb8ad; color: #fffefc; }
-
-  .toast {
-    position: absolute;
-    left: 50%;
-    bottom: 34px;
-    transform: translateX(-50%) translateY(10px);
-    background: rgba(60, 56, 48, 0.88);
-    color: #fffefc;
-    font-size: 13px;
-    padding: 9px 18px;
-    border-radius: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    letter-spacing: 0.02em;
-  }
-  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
@@ -1322,6 +1191,7 @@
       if (dx > 0) showPrev(); else showNext();
     }
   }, { passive: true });
+</script>
 
 </body>
 </html>
